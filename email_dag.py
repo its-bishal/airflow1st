@@ -7,7 +7,7 @@ from airflow.operators.email_operator import EmailOperator
 default_args = {
     'owner': 'airflow',
     'start_date': datetime(2024, 3, 14),
-    'email': ['ngawanggurung@outlook.com'],
+    'email': ['neupanebishal039@outlook.com'],
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 1,
@@ -34,11 +34,11 @@ start_task = PythonOperator(
 
 send_email = EmailOperator(
     task_id='send_email',
-    to='tseringnc707@gmail.com',
+    to='neupanebishal039@gmail.com',
     # to='susma.pant@extensodata.com',
     # to = ['tseringnc707@gmail.com','susma.pant@extensodata.com','neupanebishal039@gmail.com', 'anuragkarkikarki79@gmail.com', 'bisheshkafle18@gmail.com', 'kalyanad100@gmail.com'],
     subject='Airflow Message',
-    html_content="""<h2>Good Morning, Ngawang Gurung</h2>""",
+    html_content="""<h2>Good Morning, Bishal Neupane</h2>""",
     dag=email_dag
 )
 
